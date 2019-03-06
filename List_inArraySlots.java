@@ -6,19 +6,22 @@
 public class List_inArraySlots {
 
     // declare fields here
+	int[] list;
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
-    }
+    list = new int[10];
+	}
 
 
     /** 
       @return the number of elements in this list
      */
-    // public int size() {
-    // }
+    //public int size() {
+    //
+//	}
 
 
      /** 
