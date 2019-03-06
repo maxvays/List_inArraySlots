@@ -44,8 +44,11 @@ public class List_inArraySlots {
       
       @return true, in keeping with conventions yet to be discussed
      */
-     // public boolean add( int value) {
-     // }
+    public boolean add( int value) {
+        if(size == list.length) expand();
+        list[size++] = value;
+        return true;
+    }
 
 
     /** 
