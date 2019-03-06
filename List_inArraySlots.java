@@ -30,7 +30,7 @@ public class List_inArraySlots {
 		for(int i : list) {
 			output += i + ", ";
 		}
-		output += "}";
+		output += "]";
 		return output;
     }
 
