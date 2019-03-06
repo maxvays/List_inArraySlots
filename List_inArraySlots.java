@@ -54,7 +54,7 @@ public class List_inArraySlots {
      */
      private void expand() {
         System.out.println( "expand... (for debugging)");
-        List_inArraySlots copy = new List_inArraySlots;
+        List_inArraySlots copy = new List_inArraySlots();
         copy.list = new int[size * 2];
         for(int i = 0; i < size; i++){
             copy.list[i] = list[i];
