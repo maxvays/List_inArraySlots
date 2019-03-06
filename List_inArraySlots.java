@@ -56,7 +56,7 @@ public class List_inArraySlots {
       preserving existing data
      */
      private void expand() {
-        System.out.println( "expand... (for debugging)");
+        // System.out.println( "expand... (for debugging)");
         int[] doubledArray = new int[list.length * 2];
         for(int i = 0; i < size; i++){
             doubledArray[i] = list[i];
