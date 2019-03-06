@@ -25,8 +25,14 @@ public class List_inArraySlots {
        @return a string representation of this list,
        in [a,b,c,] format
       */ 
-    // public String toString() {
-    // }
+    public String toString() {
+    	output = "[";
+		for(int i : list) {
+			output += i + ", ";
+		}
+		output += "}";
+		return output;
+    }
 
     
     /** 
