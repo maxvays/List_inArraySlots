@@ -30,12 +30,12 @@ public class List_inArraySlots {
        in [a,b,c,] format
       */ 
     public String toString() {
-    	output = "[";
-		for(int i : list) {
-			output += i + ", ";
-		}
-		output += "]";
-		return output;
+    	String output = "[";
+	for(int i : list) {
+	    output += i + ", ";
+	}
+	output += "]";
+	return output;
     }
 
     
@@ -54,12 +54,11 @@ public class List_inArraySlots {
      */
      private void expand() {
         System.out.println( "expand... (for debugging)");
-        List_inArraySlots copy = new List_inArraySlots();
-        copy.list = new int[size * 2];
+        int[] doubledArray = new int[list.length * 2];
         for(int i = 0; i < size; i++){
-            copy.list[i] = list[i];
+            doubledArray[i] = list[i];
         }
-        this = copy;
+        list = doubledArray;
    // /* S.O.P. rules for debugging:
               // Working methods should be silent. But during 
               // development, the programmer must verify that 
