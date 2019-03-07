@@ -6,34 +6,27 @@
 public class List_inArraySlots {
 
     // declare fields here
-<<<<<<< HEAD
+
 	private int[] list;
-	private int size;
+	private int numberOfElements;
 
 	private static final int INITIAL_CAPACITY = 10;
-=======
-    int[] list;
-    int size;
->>>>>>> a7ee34c78e5e573309abfc264e1ba2ee956801ea
+
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
-<<<<<<< HEAD
+
     list = new int[INITIAL_CAPACITY];
 	}
-=======
-        list = new int[10];
-    }
->>>>>>> a7ee34c78e5e573309abfc264e1ba2ee956801ea
 
 
     /** 
       @return the number of elements in this list
      */
     public int size() {
-        return size;
+        return numberOfElements;
     }
 
 
@@ -43,11 +36,11 @@ public class List_inArraySlots {
       */ 
     public String toString() {
     	String output = "[";
-	for(int i : list) {
-	    output += i + ", ";
-	}
-	output += "]";
-	return output;
+		for(int i : list) {
+		    output += i + ", ";
+		}
+		output += "]";
+		return output;
     }
 
     
