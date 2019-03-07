@@ -50,8 +50,8 @@ public class List_inArraySlots {
       @return true, in keeping with conventions yet to be discussed
      */
     public boolean add( int value) {
-        if(size == list.length) expand();
-        list[size++] = value;
+        if(numberOfElements == list.length) expand();
+        list[numberOfElements++] = value;
         return true;
     }
 
@@ -63,7 +63,7 @@ public class List_inArraySlots {
      private void expand() {
         // System.out.println( "expand... (for debugging)");
         int[] doubledArray = new int[list.length * 2];
-        for(int i = 0; i < size; i++){
+        for(int i = 0; i < numberOfElements; i++){
             doubledArray[i] = list[i];
         }
         list = doubledArray;
