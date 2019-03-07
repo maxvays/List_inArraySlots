@@ -6,14 +6,16 @@
 public class List_inArraySlots {
 
     // declare fields here
-	int[] list;
-	int size;
+	private int[] list;
+	private int size;
+
+	private static final int INITIAL_CAPACITY = 10;
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
-    list = new int[10];
+    list = new int[INITIAL_CAPACITY];
 	}
 
 
