@@ -6,25 +6,35 @@
 public class List_inArraySlots {
 
     // declare fields here
+<<<<<<< HEAD
 	private int[] list;
 	private int size;
 
 	private static final int INITIAL_CAPACITY = 10;
+=======
+    int[] list;
+    int size;
+>>>>>>> a7ee34c78e5e573309abfc264e1ba2ee956801ea
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
+<<<<<<< HEAD
     list = new int[INITIAL_CAPACITY];
 	}
+=======
+        list = new int[10];
+    }
+>>>>>>> a7ee34c78e5e573309abfc264e1ba2ee956801ea
 
 
     /** 
       @return the number of elements in this list
      */
     public int size() {
-    return size;
-	}
+        return size;
+    }
 
 
      /** 
@@ -32,12 +42,12 @@ public class List_inArraySlots {
        in [a,b,c,] format
       */ 
     public String toString() {
-    	output = "[";
-		for(int i : list) {
-			output += i + ", ";
-		}
-		output += "]";
-		return output;
+    	String output = "[";
+	for(int i : list) {
+	    output += i + ", ";
+	}
+	output += "]";
+	return output;
     }
 
     
@@ -46,8 +56,11 @@ public class List_inArraySlots {
       
       @return true, in keeping with conventions yet to be discussed
      */
-     // public boolean add( int value) {
-     // }
+    public boolean add( int value) {
+        if(size == list.length) expand();
+        list[size++] = value;
+        return true;
+    }
 
 
     /** 
@@ -55,17 +68,17 @@ public class List_inArraySlots {
       preserving existing data
      */
      private void expand() {
-        System.out.println( "expand... (for debugging)");
-        
+        // System.out.println( "expand... (for debugging)");
+        int[] doubledArray = new int[list.length * 2];
+        for(int i = 0; i < size; i++){
+            doubledArray[i] = list[i];
+        }
+        list = doubledArray;
    // /* S.O.P. rules for debugging:
               // Working methods should be silent. But during 
               // development, the programmer must verify that 
               // this method is called when that is appropriate.
               // So test using the println(), then comment it out.
               // */
-<<<<<<< HEAD
-     // }
-=======
      }
->>>>>>> d1db718207a3c0d877928a90cbb0c8585e9a773b
 }
