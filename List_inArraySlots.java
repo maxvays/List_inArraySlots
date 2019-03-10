@@ -17,9 +17,8 @@ public class List_inArraySlots {
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
-
-    list = new int[INITIAL_CAPACITY];
-	}
+	list = new int[INITIAL_CAPACITY];
+    }
 
 
     /** 
@@ -74,4 +73,26 @@ public class List_inArraySlots {
               // So test using the println(), then comment it out.
               // */
      }
+
+
+    public int get(int index) {
+	return list[index];
+    }
+
+    public int set(int index, int newValue) {
+	int[] newArray = new int[list.length + 1];
+	int oldValue = list[index];
+	for(int i = 0; i < numberOfElements; i++){
+	    if (i == index) {
+		newArray[i] = newValue;
+	    }
+	    else {
+		newArray[i] = list[i];
+	    }
+	}
+	list = newArray;
+	return oldValue;
+    }
+
+   
 }
