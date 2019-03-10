@@ -35,5 +35,33 @@ public class UserOfList {
             list.add( -i);
         System.out.println("after second expansion: " + list.size() + " elements:");
         System.out.println( list);
+
+
+
+	// test accessor
+        System.out.println( "sample elements from list:");
+        for(int  elemIndex = 1; elemIndex < list.size(); elemIndex *= 2 ) {
+            System.out.println( "element " + elemIndex + ": "
+                              + list.get( elemIndex)
+                              );
+        }
+
+	// test set
+        setTest(list,  8);
+        setTest(list, 16);
+        System.out.println();
+	
+    }
+
+    /**
+      Test the set() method, reporting and
+      changing the value at index @modifyAt.
+     */
+    private static void setTest(List_inArraySlots list, int modifyAt) {
+	    System.out.println(
+	       "changed element " + modifyAt + " from "
+	       + list.set( modifyAt, modifyAt + 1000) + " to "
+	       + list.get( modifyAt)
+	    );
     }
 }
