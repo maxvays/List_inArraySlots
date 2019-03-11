@@ -106,6 +106,7 @@ public class List_inArraySlots {
 	    }
 	}
 	list = newArray;
+	numberOfElements -= 1;
 	return oldValue;
     }
 

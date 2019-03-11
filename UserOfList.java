@@ -50,6 +50,14 @@ public class UserOfList {
         setTest(list,  8);
         setTest(list, 16);
         System.out.println();
+
+        // test removing an element
+        System.out.println("removing value " + list.remove( 6)
+                          + ", leaving " + list.size() + " elements:");
+        System.out.println( list);
+        System.out.println(
+            "expecting:" + System.lineSeparator()
+          + "[29,0,23,23,23,19, NO -1 HERE! -2,-3...]");
 	
     }
 
