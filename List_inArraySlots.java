@@ -94,5 +94,22 @@ public class List_inArraySlots {
 	return oldValue;
     }
 
+    public int remove (int index) {
+	int oldValue = list[index];
+	int[] newArray = new int[list.length - 1];
+	for(int i = 0; i < numberOfElements; i++) {
+	    if (i < index) {
+		newArray[i] = list[i];
+	    }
+	    else {
+		newArray[i] = list[i+1];
+	    }
+	}
+	list = newArray;
+	return oldValue;
+    }
+
+    
+
    
 }
