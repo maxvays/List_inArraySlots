@@ -80,7 +80,7 @@ public class List_inArraySlots {
     }
 
     public int set(int index, int newValue) {
-	int[] newArray = new int[list.length + 1];
+	/*int[] newArray = new int[list.length + 1];
 	int oldValue = list[index];
 	for(int i = 0; i < numberOfElements; i++){
 	    if (i == index) {
@@ -90,7 +90,9 @@ public class List_inArraySlots {
 		newArray[i] = list[i];
 	    }
 	}
-	list = newArray;
+	list = newArray;*/
+	int oldValue = list[index];
+	list[index] = newValue;
 	return oldValue;
     }
 
