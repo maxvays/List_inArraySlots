@@ -1,4 +1,4 @@
-/** 
+/**
  Test list features.
  */
 public class UserOfList {
@@ -18,20 +18,20 @@ public class UserOfList {
         }
         System.out.println("initial population of " + list.size() + " elements:");
         System.out.println( list);
-        
+
         // // Add enough elements that expansion is expected
         for( ; i < 15; i++ ) {
-            
+
             if( i == 10) System.out.println( "expansion expected");
-            
+
             list.add( -i);
             System.out.println( "number of elements: " + list.size() );
         }
         System.out.println("result of second population: " + list.size() + " elements:");
         System.out.println( list);
-        
+
         // // Trust no one.
-        for( ; i < 35; i++ ) 
+        for( ; i < 35; i++ )
             list.add( -i);
         System.out.println("after second expansion: " + list.size() + " elements:");
         System.out.println( list);
@@ -58,7 +58,38 @@ public class UserOfList {
         System.out.println(
             "expecting:" + System.lineSeparator()
           + "[29,0,23,23,23,19, NO -1 HERE! -2,-3...]");
-	
+
+        // test adding at a specified position
+        addAtTest(list, 0, 29); // beginning of the list
+
+        // end of the list using the new add method
+        addAtTest(list, list.size(), 17);
+
+        addAtTest(list, 2, 19); // middle of a small list
+
+        // force an expansion
+        addAtTest(list, 2, 23);
+        addAtTest(list, 2, 23);
+        addAtTest(list, 2, 23);
+
+    }
+
+    /**
+      Test the 2-argument add( index, value) method.
+     */
+    private static void addAtTest( List_inArraySlots list
+                                 , int addAt
+                                 , int value
+                                 ) {
+        list.add( addAt, value);
+        System.out.println(
+            "insert " + value
+          + " at position " + addAt
+          + ", resulting in "  + list.size() + " elements:"
+          + System.lineSeparator()
+          + list
+          + System.lineSeparator()
+        );
     }
 
     /**
