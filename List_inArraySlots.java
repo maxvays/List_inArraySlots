@@ -54,7 +54,7 @@ public class List_inArraySlots {
 		return true;
   }
 
-	public boolean addAsHead( int value) {
+	public void addAsHead( int value) {
 		add(0, value);
 	}
 

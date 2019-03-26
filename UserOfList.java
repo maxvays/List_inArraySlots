@@ -72,6 +72,10 @@ public class UserOfList {
         addAtTest(list, 2, 23);
         addAtTest(list, 2, 23);
 
+        System.out.println("Adding 0 at head:");
+        list.addAsHead(0);
+        System.out.println(list);
+
     }
 
     /**
