@@ -54,6 +54,10 @@ public class List_inArraySlots {
 		return true;
   }
 
+	public boolean addAsHead( int value) {
+		add(0, value);
+	}
+
 
   /**
     Double the capacity of the List_inArraySlots,
